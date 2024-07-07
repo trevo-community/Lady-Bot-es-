@@ -43,8 +43,8 @@ Bienvenido a **Lady Bot**, un bot de WhatsApp desarrollado con amor y dedicació
 5. **Clonar el Repositorio**:
     ```bash
     cd /sdcard/
-    git clone https://github.com/tu-usuario/lady-bot.git
-    cd lady-bot
+    git clone https://github.com/trevo-community/Lady-Bot-es-.git
+    cd Lady-Bot-es-
     yarn install
     ```
 6. **Ejecutar el Script de Inicio**:
@@ -56,11 +56,11 @@ Bienvenido a **Lady Bot**, un bot de WhatsApp desarrollado con amor y dedicació
 
 1. **Clonar el Repositorio**:
     ```bash
-    git clone https://github.com/tu-usuario/lady-bot.git
+    git clone https://github.com/trevo-community/Lady-Bot-es-.git
     ```
 2. **Instalar las Dependencias**:
     ```bash
-    cd lady-bot
+    cd Lady-Bot-es-
     npm install
     ```
 3. **Configurar tu Bot**:
