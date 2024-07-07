@@ -60,7 +60,7 @@ console.error(err.stack);
 
 // ABAIXO: INÍCIO DE CONEXÃO
 
-async function ladyonline(upsert, conn, qrcode, sessionStartTim) {
+async function ladyonline(upsert, conn, sessionStartTim) {
 
 if(sessionStartTim) {
 const nmrdn_dono2 = setting.numerodono.replace(new RegExp("[()+-/ +/]", "gi"),
@@ -192,11 +192,11 @@ const numerodono = [`${nmrdn}`, `${dono1}@s.whatsapp.net`,
 
 //===========(Res_espere)=============\\
 
-const { Mensajes } = require('./armor/js/aleatoria.js');
+const { mensagens } = require('./armor/js/aleatoria.js');
 
 const { sortear } = require('./armor/js/aleatoria.js');
 
-var enviarmen = Mensajes[Math.floor(Math.random() * Mensajes.length)];
+var enviarmen = mensagens[Math.floor(Math.random() * mensagens.length)];
 //========================================\\
 
 //================= Funções de Grupo 🥋 =============//
@@ -1371,7 +1371,7 @@ Goldrgs(rggold)
             
 if(isBanned) return BannedExpired(ban)
 
-var palabrasfr = JSON.parse(fs.readFileSync("./datab/grupos/palabras_forca.json"))
+var palabrasfr = JSON.parse(fs.readFileSync("./datab/grupos/palavras_forca.json"))
 
 var palabrasfrc = palabrasfr[Math.floor(Math.random() * palabrasfr.length)]
 
