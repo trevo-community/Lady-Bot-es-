@@ -721,65 +721,37 @@ if(isGroup && isCmd && !SoDono && !isnit && getComandoBlock(from).includes(comma
 if(isConsole) {
 if(isGroup && info.message?.reactionMessage?.text) {
 console.log(colors.brightGreen(`
-╭──────────────────────────────────
-│
-│ 〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
-│
-│ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
-│
-│ 〔 ${isGroup ? colors.brightMagenta("GRUPO"): colors.brightMagenta("PRIVADO")} 〕${isGroup ? `〔 ${colors.cyan(groupName)} 〕`: ""}
-│
-│ 〔 REACCIÓN 〕: 〔 ${info.message.reactionMessage.text} 〕
-│
-╰─────────────────────────────────`))  
+ 〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
+ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
+ 〔 ${isGroup ? colors.brightMagenta("GRUPO"): colors.brightMagenta("PRIVADO")} 〕${isGroup ? `〔 ${colors.cyan(groupName)} 〕`: ""}
+ 〔 REACCIÓN 〕: 〔 ${info.message.reactionMessage.text} 〕
+`))  
 } else if(isGroup && !isCmd) {
 console.log(colors.brightGreen(`
-╭──────────────────────────────────
-│
-│ 〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
-│
-│ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
-│
-│ 〔 ${colors.brightMagenta("GRUPO")} 〕:〔 ${colors.cyan(groupName)} 〕
-│
-╰─────────────────────────────────`))
+〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
+〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
+〔 ${colors.brightMagenta("GRUPO")} 〕:〔 ${colors.cyan(groupName)} 〕
+`))
 } else if(isCmd && !isGroup) {
 console.log(colors.brightGreen(`
-╭──────────────────────────────────
-│
-│ 〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
-│
-│ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
-│
-│ 〔 ${colors.red("PRIVADO")} 〕 
-│
-│ 〔 COMANDO 〕 :「 ${command} 」
-│
-╰─────────────────────────────────  `)) 
+〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
+〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
+〔 ${colors.red("PRIVADO")} 〕 
+〔 COMANDO 〕 :「 ${command} 」
+`)) 
 } else if(isCmd && isGroup) {
 console.log(colors.brightGreen(`
-╭──────────────────────────────────
-│
-│ 〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
-│
-│ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
-│
-│ 〔 ${colors.brightMagenta("GRUPO")} 〕:〔 ${colors.cyan(groupName)} 〕
-│
-│ 〔 COMANDO 〕:「 ${command} 」
-│
-╰─────────────────────────────────`))
+〔 ${colors.brightYellow("USUARIO")} 〕: ${pushname}
+〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
+〔 ${colors.brightMagenta("GRUPO")} 〕:〔 ${colors.cyan(groupName)} 〕
+〔 COMANDO 〕:「 ${command} 」
+ `))
 } else {
 console.log(colors.brightGreen(`
-╭──────────────────────────────────
-│
-│ 〔 ${colors.brightYellow("USUARIO")} 〕 : ${pushname}
-│
-│ 〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
-│
-│ 〔 ${colors.red("PRIVADO")} 〕
-│
-╰─────────────────────────────────`))  
+〔 ${colors.brightYellow("USUARIO")} 〕 : ${pushname}
+〔 NÚMERO 〕:〔 ${colors.brightMagenta(sender.split("@")[0])} 〕
+〔 ${colors.red("PRIVADO")} 〕
+`))  
 }
 }
 numerodn = setting.numerodono
