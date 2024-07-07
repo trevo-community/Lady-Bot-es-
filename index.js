@@ -1175,22 +1175,21 @@ MSG_ANTPV2.push(sender)
 
 // ANTI PV QUE IGNORA
 if(!isGroup && !isPremium && !SoDono && !info.key.fromMe && isAntiPv3) {
-return
-}
-const nomeBot = NomeDoBot
-// ANTI_LIGAR \\
-var BLC_ANTCL = []
-if(!isGroup && isAnticall && !BLC_ANTCL.includes(sender)) {
-conn.ws.on('CB:call', async (B) => {
-if(B.content[0].tag == 'offer') {
-conn.sendMessage(B.content[0].attrs['call-creator'], { text: "_- PROGRAMACIÓN - _\n\n BLOQUEAR / USUARIOS PARA ENVIAR MENSAJES AL BOT\n\n_- REALIZANDO ACCIÓN_-"" }).then(() => { 
-conn.updateBlockStatus(B.content[0].attrs['call-creator'], "block")
-})
-}
-})
-BLC_ANTCL.push(sender)
-}
-
+    return
+    }
+    const nomeBot = NomeDoBot
+    // ANTI_LIGAR \\
+    var BLC_ANTCL = []
+    if(!isGroup && isAnticall && !BLC_ANTCL.includes(sender)) {
+    conn.ws.on('CB:call', async (B) => {
+    if(B.content[0].tag == 'offer') {
+    conn.sendMessage(B.content[0].attrs['call-creator'], { text: "_- PROGRAMAÇÃO DE - _\n\n BLOQUEAR / USUARIOS POR EFETUAR LIGAÇÃO PARA O BOT\n\n_- REALIZANDO AÇÃO _-" }).then(() => { 
+    conn.updateBlockStatus(B.content[0].attrs['call-creator'], "block")
+    })
+    }
+    })
+    BLC_ANTCL.push(sender)
+    }
 //======================================\\ LMR
 
 var i9 = countMessage.map(i => i.groupId).indexOf(from)
@@ -1952,7 +1951,7 @@ const kaic = conn
          case "x4":
             case "4x4": {
                 fras = [
-"¡Vamos con todo chicos!", "¡Muestra tu potencial ahora!", "¡Somos imparables!", "¡La victoria es nuestra, créeme!", "¡Acción rápida, victoria segura!", "¡No dejaremos a nadie atrás!" "¡Juntos somos invencibles!", "¡Concentración, determinación y coraje!", "¡Nada puede detenernos!", "¡Demostremos quién manda aquí!", "¡No olvides trabajar en equipo!", "¡La fortuna favorece a los atrevidos!" "¡Hagamos historia hoy!", "¡No podemos rendirnos, la lucha apenas comienza!", "¡Concentración total, muchachos!", "¡No tengas miedo, enfrenta el peligro de frente!", "¡La victoria está a un paso de nosotros, no daremos marcha atrás!", "¡Cree en ti mismo y gana!", "¡Juguemos con estrategia e inteligencia!", "¡Eres el mejor, demostrémoslo ahora!", "¡No permitas que nos subestimen, demuestra de lo que somos capaces!", "¡Manténganse alerta, el enemigo está cerca!", "La fuerza está en cada uno de nosotros, ¡usémosla!", "¡No dejes que el cansancio se interponga en tu camino, sigue adelante!", "¡No hay mejor equipo que el nuestro!"
+"¡Vamos con todo chicos!", "¡Muestra tu potencial ahora!", "¡Somos imparables!", "¡La victoria es nuestra, créeme!", "¡Acción rápida, victoria segura!", "¡No dejaremos a nadie atrás!", "¡Juntos somos invencibles!", "¡Concentración, determinación y coraje!", "¡Nada puede detenernos!", "¡Demostremos quién manda aquí!", "¡No olvides trabajar en equipo!", "¡La fortuna favorece a los atrevidos!", "¡Hagamos historia hoy!", "¡No podemos rendirnos, la lucha apenas comienza!", "¡Concentración total, muchachos!", "¡No tengas miedo, enfrenta el peligro de frente!", "¡La victoria está a un paso de nosotros, no daremos marcha atrás!", "¡Cree en ti mismo y gana!", "¡Juguemos con estrategia e inteligencia!", "¡Eres el mejor, demostrémoslo ahora!", "¡No permitas que nos subestimen, demuestra de lo que somos capaces!", "¡Manténganse alerta, el enemigo está cerca!", "La fuerza está en cada uno de nosotros, ¡usémosla!", "¡No dejes que el cansancio se interponga en tu camino, sigue adelante!", "¡No hay mejor equipo que el nuestro!"
                 ]
                 epa = fras[Math.floor(Math.random() * fras.length)]
                 tabi = ["😀", "😃", "😁", "😆", "😂", "🤣", "😭", "😉", "😘", "😗", "🥰", "😍", "🤩", "🥳", "🙃", "🙂", "🥲", "😋", "😛", "😜", "😝", "😜", "😇", "😊", "☺️", "😏", "😌", "😔", "😑", "😐", "😶", "🤔", "🤫", "🤭", "🥱", "🤗", "🤨", "🧐", "😒", "🙄", "😤", "😠", "🤬", "🥺", "😥", "😟", "☹️", "😦", "😧", "😰", "😨", "😕", "😯", "😲", "😳", "🤯", "😬", "😓", "😓", "😞", "😖", "🥴", "😎", "🤓", "😎", "🥵", "🥶", "🌞", "🤥", "🤡", "😈", "🥵", "👽", "😷", "💦", "👺", "👹", "💨", "😸", "😹", "❤️", "🫀", "😻", "💋", "🫂", "👄", "👅", "💅", "🙏", "🤳", "✍️", "🙅", "🌀", "☃️", "🔥", "⚡", "🌈", "💧", "🙈", "🍑", "🍒", "🍓", "🌶️", "🍆", "🍷", "🍴", "🍽️", "🛢️", "🚨", "🎤", "🎭", "📽️", "🎰", "☎️", "📞", "👑", "💎", "💍", "🗡️", "⚔️", "💣", "⁉️", "✅", "♥️", "🧡", "💛", "💚", "💙", "💜", "🤎", "🖤", "🤍", "🇧🇷", "🏳️‍🌈", "🤔", "🤫", "😏", "🍆", "👺", "🙊"]
@@ -1992,7 +1991,7 @@ ${epa}`,
             case "6x6": {
 
                 fras = [
-"¡Vamos con todo chicos!", "¡Muestra tu potencial ahora!", "¡Somos imparables!", "¡La victoria es nuestra, créeme!", "¡Acción rápida, victoria segura!", "¡No dejaremos a nadie atrás!" "¡Juntos somos invencibles!", "¡Concentración, determinación y coraje!", "¡Nada puede detenernos!", "¡Demostremos quién manda aquí!", "¡No olvides trabajar en equipo!", "¡La fortuna favorece a los atrevidos!" "¡Hagamos historia hoy!", "¡No podemos rendirnos, la lucha apenas comienza!", "¡Concentración total, muchachos!", "¡No tengas miedo, enfrenta el peligro de frente!", "¡La victoria está a un paso de nosotros, no daremos marcha atrás!", "¡Cree en ti mismo y gana!", "¡Juguemos con estrategia e inteligencia!", "¡Eres el mejor, demostrémoslo ahora!", "¡No permitas que nos subestimen, demuestra de lo que somos capaces!", "¡Manténganse alerta, el enemigo está cerca!", "La fuerza está en cada uno de nosotros, ¡usémosla!", "¡No dejes que el cansancio se interponga en tu camino, sigue adelante!", "¡No hay mejor equipo que el nuestro!"
+"¡Vamos con todo chicos!", "¡Muestra tu potencial ahora!", "¡Somos imparables!", "¡La victoria es nuestra, créeme!", "¡Acción rápida, victoria segura!", "¡No dejaremos a nadie atrás!", "¡Juntos somos invencibles!", "¡Concentración, determinación y coraje!", "¡Nada puede detenernos!", "¡Demostremos quién manda aquí!", "¡No olvides trabajar en equipo!", "¡La fortuna favorece a los atrevidos!", "Hagamos historia hoy!", "¡No podemos rendirnos, la lucha apenas comienza!", "¡Concentración total, muchachos!", "¡No tengas miedo, enfrenta el peligro de frente!", "¡La victoria está a un paso de nosotros, no daremos marcha atrás!", "¡Cree en ti mismo y gana!", "¡Juguemos con estrategia e inteligencia!", "¡Eres el mejor, demostrémoslo ahora!", "¡No permitas que nos subestimen, demuestra de lo que somos capaces!", "¡Manténganse alerta, el enemigo está cerca!", "La fuerza está en cada uno de nosotros, ¡usémosla!", "¡No dejes que el cansancio se interponga en tu camino, sigue adelante!", "¡No hay mejor equipo que el nuestro!"
                 ]
                 epa = fras[Math.floor(Math.random() * fras.length)]
 
